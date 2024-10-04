@@ -1,0 +1,68 @@
+
+*** Running vivado
+    with args -log processor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source processor.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source processor.tcl -notrace
+Command: synth_design -top processor -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 528 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 441.754 ; gain = 95.680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'processor' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/processor.v:1]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_MEMORY_ADDR_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_MEMORY_DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter REG_FILE_ADDR_BUS_WIDTH bound to: 5 - type: integer 
+	Parameter REG_FILE_DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter INST_MEMORY_ADDR_BUS_WIDTH bound to: 16 - type: integer 
+	Parameter INST_MEMORY_DATA_BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pc' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/pc.v:23]
+	Parameter BUS_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pc' (1#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/pc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'adder' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/imports/source_files/adder.sv:3]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'adder' (2#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/imports/source_files/adder.sv:3]
+WARNING: [Synth 8-689] width (16) of port connection 'a' does not match port width (32) of module 'adder' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/processor.v:33]
+WARNING: [Synth 8-689] width (16) of port connection 'y' does not match port width (32) of module 'adder' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/processor.v:35]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/data_memory.v:23]
+	Parameter ADDR_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_DEPTH bound to: 64 - type: integer 
+	Parameter MEM_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (3#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/data_memory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/register_file.v:1]
+	Parameter ADDR_BUS_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (4#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/register_file.v:1]
+INFO: [Synth 8-6157] synthesizing module 'extend' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/extend.v:1]
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'extend' (5#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/alu.v:1]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'alu' (6#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/new/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'imem' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor/non_pipelined_processor.srcs/sources_1/imports/source_files/imem.sv:3]
+	Parameter ADDR_BUS_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_DEPTH bound to: 65536 - type: integer 
+	Parameter MEM_WIDTH bound to: 8 - type: integer 
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 

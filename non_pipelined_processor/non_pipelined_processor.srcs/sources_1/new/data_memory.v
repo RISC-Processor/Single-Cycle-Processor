@@ -29,20 +29,24 @@ module data_memory
         input [ADDR_BUS_WIDTH - 1:0] addr,
         input [DATA_BUS_WIDTH - 1:0] write_data,
         input write_en,
-        input [DATA_BUS_WIDTH - 1:0] read_data
+        output [DATA_BUS_WIDTH - 1:0] read_data
     );
         
-    localparam MEM_DEPTH = 1024;
+    localparam MEM_DEPTH = 64;
+    localparam MEM_WIDTH = 8;
 
-    reg [DATA_BUS_WIDTH - 1:0] mem [0:MEM_DEPTH - 1];
+    reg [MEM_WIDTH - 1:0] mem [0:MEM_DEPTH - 1];
 
-    assign read_data = mem[addr];
+    assign read_data = {mem[addr], mem[addr + 1], mem[addr + 2], mem[addr + 3]};
 
     always @(posedge clk)
     begin
         if(write_en)
         begin
-            mem[addr] <= write_data;
+            mem[addr] <= write_data[4 * MEM_WIDTH - 1: 3 * MEM_WIDTH];
+            mem[addr + 1] <= write_data[3 * MEM_WIDTH - 1: 2 * MEM_WIDTH];
+            mem[addr + 2] <= write_data[2 * MEM_WIDTH - 1: MEM_WIDTH];
+            mem[addr + 3] <= write_data[MEM_WIDTH - 1: 0];
         end
     end
     
