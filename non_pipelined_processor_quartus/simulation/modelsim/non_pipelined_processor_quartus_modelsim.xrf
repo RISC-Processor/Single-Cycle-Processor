@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/register_file.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/pc.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/imem.sv
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/extend.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/data_memory.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/alu.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/adder.sv
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/db/non_pipelined_processor_quartus.cbx.xml
+design_name = processor
+instance = comp, \clk~input , clk~input, processor, 1
