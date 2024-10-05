@@ -10,8 +10,8 @@ module register_file
         input [ADDR_BUS_WIDTH - 1:0] addr3,
         input [DATA_BUS_WIDTH - 1:0] write_data,
         input write_en,
-        input [DATA_BUS_WIDTH - 1:0] read_data1,
-        input [DATA_BUS_WIDTH - 1:0] read_data2
+        output [DATA_BUS_WIDTH - 1:0] read_data1,
+        output [DATA_BUS_WIDTH - 1:0] read_data2
     );
 
     localparam MEM_DEPTH = 32;
@@ -20,8 +20,13 @@ module register_file
 
     assign read_data1 = mem[addr1];
     assign read_data2 = mem[addr2];
+	 
+	 initial
+	 begin
+		  mem[9] = 32'h00002004;
+	 end
 
-    always @(posedge clk)
+    always @(negedge clk)
     begin
         if(write_en)
         begin
