@@ -27,6 +27,11 @@ module pc
         input [BUS_WIDTH - 1:0] pc_next,
         output reg [BUS_WIDTH - 1:0] pc
     );
+	 
+	 initial
+	 begin
+		  pc = 16'h0000;
+	 end
     
     always @(posedge clk)
     begin

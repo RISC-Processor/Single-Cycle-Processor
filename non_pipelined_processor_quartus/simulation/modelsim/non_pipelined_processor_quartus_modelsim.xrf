@@ -7,6 +7,7 @@ source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pi
 source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/data_memory.v
 source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/alu.v
 source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/adder.sv
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor_tb.v
 source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/db/non_pipelined_processor_quartus.cbx.xml
 design_name = processor
 instance = comp, \clk~input , clk~input, processor, 1

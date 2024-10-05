@@ -31,7 +31,7 @@ module processor
     // Instantiate adder
     adder # (BUS_WIDTH) adder_inst1 (
         .a(pc_out),
-        .b({{28{1'b0}}, {4'd4}}),
+        .b({{28{1'b0}}, {4'h4}}),
         .y(pc_4)
     );
     

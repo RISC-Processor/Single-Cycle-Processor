@@ -1,0 +1,191 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FPGA_Projects\RV32I_Processor\Non-Pipelined-Processor\non_pipelined_processor_quartus\simulation\modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 73R^WZ2nHi>X2>06nF?JV1
+I=h4dOjD;>FT5L_gE0`BJV3
+V8I7?g3DeA@aHF_eW`A]Ab2
+!s105 adder_sv_unit
+S1
+Z2 dD:\FPGA_Projects\RV32I_Processor\Non-Pipelined-Processor\non_pipelined_processor_quartus\simulation\modelsim
+w1728021695
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/adder.sv
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/adder.sv
+L0 3
+Z3 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1728134024.153000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/adder.sv|
+!s101 -O0
+Z4 o-sv -work work -O0
+Z5 !s92 -sv -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus -O0
+valu
+IkLXQZ6:]HA_bgl9`H_h=81
+V4Z>004`AMDAfa1[84=20=3
+R2
+w1728019914
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/alu.v
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/alu.v
+L0 1
+R3
+r1
+31
+Z6 o-vlog01compat -work work -O0
+Z7 !s92 -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus -O0
+!i10b 1
+!s100 Eh593b:i=]FFm7iSi3E;e1
+!s85 0
+!s108 1728134023.510000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/alu.v|
+!s101 -O0
+vdata_memory
+IYzh_aU`5QhIKj;a]RE0Pn3
+VVT;6Z22gJ>Q=eS2>@9VPD1
+R2
+w1728023447
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/data_memory.v
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/data_memory.v
+L0 23
+R3
+r1
+31
+R6
+R7
+!i10b 1
+!s100 3bWUXd:nI:NBaFU^MdUkM3
+!s85 0
+!s108 1728134023.338000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/data_memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/data_memory.v|
+!s101 -O0
+vextend
+Ih0IA[ef_`]6hUR`g1H46d1
+VT1gM]H9M2U5U2L4d0he3L1
+R2
+w1727966343
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/extend.v
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/extend.v
+L0 1
+R3
+r1
+31
+R6
+R7
+!i10b 1
+!s100 ^OPDA^ETVjWXQ:ThXZ=<M1
+!s85 0
+!s108 1728134023.154000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/extend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/extend.v|
+!s101 -O0
+vimem
+R1
+IN>o1QJa;IIb6P_;CiQT[j1
+V5ZX1JTleiQT`D@5h6UKOQ1
+S1
+R2
+w1728133553
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/imem.sv
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/imem.sv
+L0 3
+R3
+r1
+31
+R4
+!i10b 1
+!s100 aUJeL;BT9SD>UA_kP7_k_2
+!s105 imem_sv_unit
+!s85 0
+!s108 1728134023.720000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/imem.sv|
+!s101 -O0
+R5
+vpc
+IUzP0kfB71fcf9IFn6C2j@2
+VSS25?N6D`i]niXeFNNFe:0
+R2
+w1728133475
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/pc.v
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/pc.v
+L0 23
+R3
+r1
+31
+R6
+R7
+!i10b 1
+!s100 kGz2G[A1gBRW2E?XOgAPc0
+!s85 0
+!s108 1728134022.973000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/pc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/pc.v|
+!s101 -O0
+vprocessor
+IYBmT1?m^i52dTCh@aP[:D2
+V>fcJK52eVTPlHefKCNJZf1
+R2
+w1728133283
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor.v
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor.v
+L0 1
+R3
+r1
+31
+R6
+R7
+!i10b 1
+!s100 _5kiIRWPie=[:UXBeJWc01
+!s85 0
+!s108 1728134022.843000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor.v|
+!s101 -O0
+vprocessor_tb
+IXPzF4PQVfA0XT<H^W2G390
+V?Q:f9KMFoF>W=nkTn`JYE1
+R2
+w1728133989
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor_tb.v
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor_tb.v
+L0 3
+R3
+r1
+31
+R6
+R7
+!i10b 1
+!s100 Y<O_HEQfgh4NU>A=Fo:M`2
+!s85 0
+!s108 1728134023.619000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor_tb.v|
+!s101 -O0
+vregister_file
+Ib[_=ikXkOJ_WX[eI]nOlR2
+V3F;izKh4ab?DBT]18?VG92
+R2
+w1728020359
+8D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/register_file.v
+FD:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/register_file.v
+L0 1
+R3
+r1
+31
+R6
+R7
+!i10b 1
+!s100 8cTRkho5>>NoBCU3j@j`E0
+!s85 0
+!s108 1728134022.672000
+!s107 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/register_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus|D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/register_file.v|
+!s101 -O0

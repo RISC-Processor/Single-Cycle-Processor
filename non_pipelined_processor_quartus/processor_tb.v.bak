@@ -1,0 +1,16 @@
+module processor_tb;
+    reg clk = 1'b0;
+
+    processor # (BUS_WIDTH = 32) processor_inst (
+        .clk(clk)
+    );
+
+    initial
+    begin
+        forever
+        begin
+            #5 clk = ~clk;
+        end
+    end
+
+endmodule
