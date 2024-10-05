@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity adder is
     generic(
-        BUS_WIDTH       : integer := 32
+        BUS_WIDTH       : integer := 16
     );
     port(
         a               : in     vl_logic_vector;

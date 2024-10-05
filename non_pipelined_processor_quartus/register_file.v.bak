@@ -20,13 +20,8 @@ module register_file
 
     assign read_data1 = mem[addr1];
     assign read_data2 = mem[addr2];
-	 
-	 initial
-	 begin
-		  mem[9] = 32'h00002004;
-	 end
 
-    always @(posedge clk)
+    always @(negedge clk)
     begin
         if(write_en)
         begin
