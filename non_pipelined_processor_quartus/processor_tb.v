@@ -37,16 +37,16 @@ module processor_tb
     );
 
     // Instantiate adder
-    adder # (BUS_WIDTH) adder_inst1 (
+    adder # (INST_MEMORY_ADDR_BUS_WIDTH) adder_inst1 (
         .a(pc_out),
         .b({{12{1'b0}}, 4'b0100}),
         .y(pc_4)
     );
-    /*
+
     // Insntiate data_memory module
     data_memory #(DATA_MEMORY_ADDR_BUS_WIDTH, DATA_MEMORY_DATA_BUS_WIDTH) data_memory_inst (
         .clk(clk),
-        .addr(alu_result),
+        .addr(alu_result - 32'h00002000),	// Change later
         .write_data({32{1'b0}}),
         .write_en(1'b0),
         .read_data(read_data)
@@ -69,7 +69,7 @@ module processor_tb
         .imm(instr[31:20]),
         .extended_imm(imm_ext)
     );
-
+	
     // Insntiate alu module
     alu #(BUS_WIDTH) alu_inst (
         .src_a(src_a),
@@ -77,11 +77,11 @@ module processor_tb
         .alu_op({3{1'b0}}),
         .alu_result(alu_result)
     );
-    
+
     // Instantiate instruction memory module
     imem # (INST_MEMORY_ADDR_BUS_WIDTH, INST_MEMORY_DATA_BUS_WIDTH) imem_inst (
         .a(pc_out),
         .rd(instr)
     );
-	 */
+
 endmodule

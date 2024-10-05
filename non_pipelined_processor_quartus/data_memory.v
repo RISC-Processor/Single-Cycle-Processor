@@ -38,8 +38,16 @@ module data_memory
     reg [MEM_WIDTH - 1:0] mem [0:MEM_DEPTH - 1];
 
     assign read_data = {mem[addr], mem[addr + 1], mem[addr + 2], mem[addr + 3]};
+	 
+	 initial
+	 begin
+		mem[0] = 8'h00;
+		mem[1] = 8'h00;
+		mem[2] = 8'h00;
+		mem[3] = 8'd10;
+	 end
 
-    always @(posedge clk)
+    always @(negedge clk)
     begin
         if(write_en)
         begin

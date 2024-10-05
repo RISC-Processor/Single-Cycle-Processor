@@ -10,18 +10,48 @@
 # ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/register_file.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
 # vlog -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/pc.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module pc
 # 
 # Top level modules:
 # 	pc
-# vlog -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/pc_tb.v}
+# vlog -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/extend.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module pc_tb
+# -- Compiling module extend
 # 
 # Top level modules:
-# 	pc_tb
+# 	extend
+# vlog -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/data_memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# vlog -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/processor_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processor_tb
+# 
+# Top level modules:
+# 	processor_tb
+# vlog -sv -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/imem.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
 # vlog -sv -work work +incdir+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus {D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_quartus/adder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module adder
@@ -29,13 +59,24 @@
 # Top level modules:
 # 	adder
 # 
-vsim work.pc_tb
-# vsim work.pc_tb 
-# Loading work.pc_tb
+vsim work.processor_tb
+# vsim work.processor_tb 
+# Loading work.processor_tb
 # Loading work.pc
 # Loading sv_std.std
 # Loading work.adder
-add wave -position end  sim:/pc_tb/clk
-add wave -position end  sim:/pc_tb/pc
-add wave -position end  sim:/pc_tb/pc_next
+# Loading work.data_memory
+# Loading work.register_file
+# Loading work.extend
+# Loading work.alu
+# Loading work.imem
+add wave -position end  sim:/processor_tb/alu_result
+add wave -position end  sim:/processor_tb/clk
+add wave -position end  sim:/processor_tb/imm_ext
+add wave -position end  sim:/processor_tb/instr
+add wave -position end  sim:/processor_tb/pc_4
+add wave -position end  sim:/processor_tb/pc_out
+add wave -position end  sim:/processor_tb/read_data
+add wave -position end  sim:/processor_tb/src_a
+add wave -position end  sim:/processor_tb/src_b
 run

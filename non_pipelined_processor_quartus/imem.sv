@@ -19,10 +19,15 @@ module imem
 //        $readmemh("memfile.dat", memory);
 	initial
 	begin
-		memory[0] = 8'hFF;
-		memory[1] = 8'hC4;
-		memory[2] = 8'hA3;
-		memory[3] = 8'h03;
+		memory[4] = 8'hFF;
+		memory[5] = 8'hC4;
+		memory[6] = 8'hA3;
+		memory[7] = 8'h03;
+		
+		memory[8] = 8'h00;
+		memory[9] = 8'b00000011;
+		memory[10] = 8'b00000000;
+		memory[11] = 8'h00;	//instr[19:15] = 6
 	end
         
    assign rd = {memory[a], memory[a + 1], memory[a + 2], memory[a + 3]};

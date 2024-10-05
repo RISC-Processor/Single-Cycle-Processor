@@ -26,7 +26,7 @@ module register_file
 		  mem[9] = 32'h00002004;
 	 end
 
-    always @(posedge clk)
+    always @(negedge clk)
     begin
         if(write_en)
         begin
