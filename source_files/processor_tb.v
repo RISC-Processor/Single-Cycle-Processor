@@ -12,7 +12,7 @@ module processor_tb
         #10 clk = ~clk;
     end
 	 
-	 localparam DATA_MEMORY_ADDR_BUS_WIDTH = 32;
+	localparam DATA_MEMORY_ADDR_BUS_WIDTH = 32;
     localparam DATA_MEMORY_DATA_BUS_WIDTH = 32;
     localparam REG_FILE_ADDR_BUS_WIDTH = 5;
     localparam REG_FILE_DATA_BUS_WIDTH = 32;

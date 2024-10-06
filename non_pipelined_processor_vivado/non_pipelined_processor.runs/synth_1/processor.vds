@@ -1,0 +1,472 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Oct  6 10:57:45 2024
+# Process ID: 18788
+# Current directory: D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.runs/synth_1
+# Command line: vivado.exe -log processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source processor.tcl
+# Log file: D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.runs/synth_1/processor.vds
+# Journal file: D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source processor.tcl -notrace
+Command: synth_design -top processor -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15800 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 440.805 ; gain = 95.359
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'processor' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor.v:1]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_MEMORY_ADDR_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_MEMORY_DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter REG_FILE_ADDR_BUS_WIDTH bound to: 5 - type: integer 
+	Parameter REG_FILE_DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter INST_MEMORY_ADDR_BUS_WIDTH bound to: 16 - type: integer 
+	Parameter INST_MEMORY_DATA_BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pc' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v:23]
+	Parameter BUS_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pc' (1#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'adder' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv:3]
+	Parameter BUS_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'adder' (2#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v:23]
+	Parameter ADDR_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_DEPTH bound to: 64 - type: integer 
+	Parameter MEM_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (3#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v:1]
+	Parameter ADDR_BUS_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (4#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v:1]
+INFO: [Synth 8-6157] synthesizing module 'extend' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v:1]
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'extend' (5#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v:1]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'alu' (6#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'imem' [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv:3]
+	Parameter ADDR_BUS_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_DEPTH bound to: 65536 - type: integer 
+	Parameter MEM_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'imem' (7#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (8#1) [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor.v:1]
+WARNING: [Synth 8-3331] design alu has unconnected port alu_op[2]
+WARNING: [Synth 8-3331] design alu has unconnected port alu_op[1]
+WARNING: [Synth 8-3331] design alu has unconnected port alu_op[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 501.871 ; gain = 156.426
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 501.871 ; gain = 156.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 501.871 ; gain = 156.426
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.srcs/constrs_1/imports/Downloads/Zybo-Master.xdc]
+Finished Parsing XDC File [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.srcs/constrs_1/imports/Downloads/Zybo-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.srcs/constrs_1/imports/Downloads/Zybo-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/processor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/processor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 839.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 64    
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 36    
+	   2 Input      8 Bit        Muxes := 60    
+	   9 Input      8 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 58    
+	   4 Input      1 Bit        Muxes := 16    
+	   5 Input      1 Bit        Muxes := 48    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pc 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module data_memory 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 64    
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 36    
+	   2 Input      8 Bit        Muxes := 60    
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 58    
+	   4 Input      1 Bit        Muxes := 16    
+	   5 Input      1 Bit        Muxes := 48    
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module imem 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 3     
++---Muxes : 
+	   9 Input      8 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[31]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[30]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[29]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[28]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[27]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[26]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[25]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[24]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[23]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[22]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[21]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[20]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[19]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[18]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[17]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[16]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[15]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[14]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[13]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[12]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[11]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[10]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[9]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[8]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[7]
+WARNING: [Synth 8-3331] design data_memory has unconnected port addr[6]
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[63][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[62][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[61][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[60][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[59][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[58][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[57][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[56][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[55][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[54][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[53][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][4]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][3]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][2]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][1]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[52][0]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[51][7]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[51][6]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[51][5]) is unused and will be removed from module processor.
+WARNING: [Synth 8-3332] Sequential element (data_memory_inst/mem_reg[51][4]) is unused and will be removed from module processor.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 538 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 839.883 ; gain = 156.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 839.883 ; gain = 494.438
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 130 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 839.883 ; gain = 506.109
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.runs/synth_1/processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file processor_utilization_synth.rpt -pb processor_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 839.883 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Oct  6 10:58:18 2024...

@@ -1,5 +1,5 @@
-Analysis & Elaboration report for non_pipelined_processor_quartus
-Sat Oct 05 21:46:33 2024
+Analysis & Synthesis report for non_pipelined_processor_quartus
+Sun Oct 06 10:41:20 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -7,23 +7,28 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |processor_tb
-  5. Parameter Settings for User Entity Instance: pc:pc_inst
-  6. Parameter Settings for User Entity Instance: adder:adder_inst1
-  7. Parameter Settings for User Entity Instance: data_memory:data_memory_inst
-  8. Parameter Settings for User Entity Instance: register_file:register_file_inst
-  9. Parameter Settings for User Entity Instance: extend:extend_inst
- 10. Parameter Settings for User Entity Instance: alu:alu_inst
- 11. Parameter Settings for User Entity Instance: imem:imem_inst
- 12. Analysis & Elaboration Settings
- 13. Port Connectivity Checks: "imem:imem_inst"
- 14. Port Connectivity Checks: "alu:alu_inst"
- 15. Port Connectivity Checks: "register_file:register_file_inst"
- 16. Port Connectivity Checks: "data_memory:data_memory_inst"
- 17. Port Connectivity Checks: "adder:adder_inst1"
- 18. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |processor
+ 10. Parameter Settings for User Entity Instance: pc:pc_inst
+ 11. Parameter Settings for User Entity Instance: adder:adder_inst1
+ 12. Parameter Settings for User Entity Instance: data_memory:data_memory_inst
+ 13. Parameter Settings for User Entity Instance: register_file:register_file_inst
+ 14. Parameter Settings for User Entity Instance: extend:extend_inst
+ 15. Parameter Settings for User Entity Instance: alu:alu_inst
+ 16. Parameter Settings for User Entity Instance: imem:imem_inst
+ 17. Port Connectivity Checks: "imem:imem_inst"
+ 18. Port Connectivity Checks: "alu:alu_inst"
+ 19. Port Connectivity Checks: "register_file:register_file_inst"
+ 20. Port Connectivity Checks: "data_memory:data_memory_inst"
+ 21. Port Connectivity Checks: "adder:adder_inst1"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -47,126 +52,32 @@ applicable agreement for further details.
 
 
 +---------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                  ;
+; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Oct 05 21:46:33 2024      ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 06 10:41:20 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; non_pipelined_processor_quartus            ;
-; Top-level Entity Name              ; processor_tb                               ;
+; Top-level Entity Name              ; processor                                  ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 1                                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
-
-
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 8      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |processor_tb ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; BUS_WIDTH      ; 32    ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pc:pc_inst ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; BUS_WIDTH      ; 16    ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:adder_inst1 ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; BUS_WIDTH      ; 16    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: data_memory:data_memory_inst ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; ADDR_BUS_WIDTH ; 32    ; Signed Integer                                   ;
-; DATA_BUS_WIDTH ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register_file:register_file_inst ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; ADDR_BUS_WIDTH ; 5     ; Signed Integer                                       ;
-; DATA_BUS_WIDTH ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: extend:extend_inst ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; DATA_BUS_WIDTH ; 32    ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: alu:alu_inst ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; BUS_WIDTH      ; 32    ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: imem:imem_inst ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; ADDR_BUS_WIDTH ; 16    ; Signed Integer                     ;
-; DATA_BUS_WIDTH ; 32    ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                                   ;
+; Analysis & Synthesis Settings                                                                                                     ;
 +----------------------------------------------------------------------------+--------------------+---------------------------------+
 ; Option                                                                     ; Setting            ; Default Value                   ;
 +----------------------------------------------------------------------------+--------------------+---------------------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                                 ;
-; Top-level entity name                                                      ; processor_tb       ; non_pipelined_processor_quartus ;
+; Top-level entity name                                                      ; processor          ; non_pipelined_processor_quartus ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX                   ;
 ; Use smart compilation                                                      ; Off                ; Off                             ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                              ;
@@ -247,6 +158,170 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------------------------------------------------------+--------------------+---------------------------------+
 
 
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; ../source_files/register_file.v  ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v ;         ;
+; ../source_files/processor.v      ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor.v     ;         ;
+; ../source_files/pc.v             ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v            ;         ;
+; ../source_files/imem.sv          ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv         ;         ;
+; ../source_files/extend.v         ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v        ;         ;
+; ../source_files/data_memory.v    ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v   ;         ;
+; ../source_files/alu.v            ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v           ;         ;
+; ../source_files/adder.sv         ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv        ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 1     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 1     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |processor                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |processor          ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |processor ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BUS_WIDTH      ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pc:pc_inst ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; BUS_WIDTH      ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder:adder_inst1 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; BUS_WIDTH      ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: data_memory:data_memory_inst ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; ADDR_BUS_WIDTH ; 32    ; Signed Integer                                   ;
+; DATA_BUS_WIDTH ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register_file:register_file_inst ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; ADDR_BUS_WIDTH ; 5     ; Signed Integer                                       ;
+; DATA_BUS_WIDTH ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: extend:extend_inst ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; DATA_BUS_WIDTH ; 32    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:alu_inst ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; BUS_WIDTH      ; 32    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: imem:imem_inst ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; ADDR_BUS_WIDTH ; 16    ; Signed Integer                     ;
+; DATA_BUS_WIDTH ; 32    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "imem:imem_inst"                                                                           ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -298,37 +373,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Elaboration
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Oct 05 21:46:29 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off non_pipelined_processor_quartus -c non_pipelined_processor_quartus --analysis_and_elaboration
+    Info: Processing started: Sun Oct 06 10:41:18 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off non_pipelined_processor_quartus -c non_pipelined_processor_quartus
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/register_file.v
     Info (12023): Found entity 1: register_file
-Info (12021): Found 1 design units, including 1 entities, in source file processor.v
-    Info (12023): Found entity 1: processor
-Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: pc
-Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
-    Info (12023): Found entity 1: imem
-Info (12021): Found 1 design units, including 1 entities, in source file extend.v
-    Info (12023): Found entity 1: extend
-Info (12021): Found 1 design units, including 1 entities, in source file data_memory.v
-    Info (12023): Found entity 1: data_memory
-Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu
-Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder
-Info (12021): Found 1 design units, including 1 entities, in source file processor_tb.v
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/processor_tb.v
     Info (12023): Found entity 1: processor_tb
-Info (12021): Found 1 design units, including 1 entities, in source file pc_tb.v
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/processor.v
+    Info (12023): Found entity 1: processor
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/pc_tb.v
     Info (12023): Found entity 1: pc_tb
-Info (12127): Elaborating entity "processor_tb" for the top level hierarchy
-Warning (10755): Verilog HDL warning at processor_tb.v(12): assignments to clk create a combinational loop
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/pc.v
+    Info (12023): Found entity 1: pc
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/imem.sv
+    Info (12023): Found entity 1: imem
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/extend.v
+    Info (12023): Found entity 1: extend
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/data_memory.v
+    Info (12023): Found entity 1: data_memory
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/alu.v
+    Info (12023): Found entity 1: alu
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/adder.sv
+    Info (12023): Found entity 1: adder
+Info (12127): Elaborating entity "processor" for the top level hierarchy
 Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_inst"
 Info (12128): Elaborating entity "adder" for hierarchy "adder:adder_inst1"
 Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_inst"
@@ -339,12 +422,17 @@ Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst"
 Info (12128): Elaborating entity "imem" for hierarchy "imem:imem_inst"
 Warning (10855): Verilog HDL warning at imem.sv(21): initial value for variable memory should be constant
 Warning (10030): Net "memory" at imem.sv(16) has no driver or initial value, using a default initial value '0'
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Sat Oct 05 21:46:33 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4621 megabytes
+    Info: Processing ended: Sun Oct 06 10:41:20 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
