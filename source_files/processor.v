@@ -69,7 +69,7 @@ module processor
 
     // Instantiate adder for adding pc and imm_ext
     adder # (BUS_WIDTH) adder_inst2 (
-        .a(pc_out),
+        .a({{BUS_WIDTH - INST_MEMORY_ADDR_BUS_WIDTH{1'b0}}, pc_out}),
         .b(imm_ext),
         .y(pc_target)
     );

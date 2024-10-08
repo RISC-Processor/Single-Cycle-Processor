@@ -10,7 +10,7 @@ module alu
         output zero
     );
 
-    assign zero = 1'b0;
+    assign zero = 1'b0; // Change this later.
 
     always @(alu_op or src_a or src_b)
     begin

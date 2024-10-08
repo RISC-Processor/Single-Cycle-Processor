@@ -4,7 +4,6 @@ Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 2ad73e7701
 Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port pc_next [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor_tb.v:67]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port a [D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor_tb.v:80]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v" Line 1. Module control doesn't have a timescale but at least one module in design has a timescale.
