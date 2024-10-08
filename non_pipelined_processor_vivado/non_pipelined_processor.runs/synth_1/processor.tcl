@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-22112-Linuka-LAP/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-27392-Linuka-LAP/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
@@ -38,6 +38,9 @@ read_verilog -library xil_defaultlib -sv {
 }
 read_verilog -library xil_defaultlib {
   D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v
+  D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v
+  D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_alu_decoder.v
+  D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_main_decoder.v
   D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v
   D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v
   D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v

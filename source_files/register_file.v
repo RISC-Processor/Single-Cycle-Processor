@@ -17,14 +17,16 @@ module register_file
     localparam MEM_DEPTH = 32;
 
     reg [DATA_BUS_WIDTH - 1:0] mem [0:MEM_DEPTH - 1];
-
-    assign read_data1 = mem[addr1];
-    assign read_data2 = mem[addr2];
+    
+    // Register 0 is always 0.
+    assign read_data1 = addr1 == 5'b00000 ? {32{1'b0}} : mem[addr1];
+    assign read_data2 = addr2 == 5'b00000 ? {32{1'b0}} : mem[addr2];
 	 
-	 initial
-	 begin
-		  mem[9] = 32'h00002004;
-	 end
+	initial
+	begin
+        mem[5] = 32'h00000006;
+        mem[9] = 32'h00002004;
+	end
 
     always @(negedge clk)
     begin

@@ -1,4 +1,7 @@
 vendor_name = ModelSim
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_main_decoder.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_alu_decoder.v
+source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v
 source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v
 source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor_tb.v
 source_file = 1, D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor.v

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for non_pipelined_processor_quartus
-Sun Oct 06 10:41:20 2024
+Tue Oct 08 14:02:31 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,20 +15,24 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: Top-level Entity: |processor
- 10. Parameter Settings for User Entity Instance: pc:pc_inst
- 11. Parameter Settings for User Entity Instance: adder:adder_inst1
- 12. Parameter Settings for User Entity Instance: data_memory:data_memory_inst
- 13. Parameter Settings for User Entity Instance: register_file:register_file_inst
- 14. Parameter Settings for User Entity Instance: extend:extend_inst
- 15. Parameter Settings for User Entity Instance: alu:alu_inst
- 16. Parameter Settings for User Entity Instance: imem:imem_inst
- 17. Port Connectivity Checks: "imem:imem_inst"
- 18. Port Connectivity Checks: "alu:alu_inst"
- 19. Port Connectivity Checks: "register_file:register_file_inst"
- 20. Port Connectivity Checks: "data_memory:data_memory_inst"
+ 10. Parameter Settings for User Entity Instance: control:control_inst
+ 11. Parameter Settings for User Entity Instance: pc:pc_inst
+ 12. Parameter Settings for User Entity Instance: adder:adder_inst1
+ 13. Parameter Settings for User Entity Instance: adder:adder_inst2
+ 14. Parameter Settings for User Entity Instance: imem:imem_inst
+ 15. Parameter Settings for User Entity Instance: register_file:register_file_inst
+ 16. Parameter Settings for User Entity Instance: extend:extend_inst
+ 17. Parameter Settings for User Entity Instance: alu:alu_inst
+ 18. Parameter Settings for User Entity Instance: data_memory:data_memory_inst
+ 19. Port Connectivity Checks: "data_memory:data_memory_inst"
+ 20. Port Connectivity Checks: "adder:adder_inst2"
  21. Port Connectivity Checks: "adder:adder_inst1"
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 22. Port Connectivity Checks: "pc:pc_inst"
+ 23. Port Connectivity Checks: "control:control_inst|control_alu_decoder:control_alu_decoder_inst"
+ 24. Port Connectivity Checks: "control:control_inst|control_main_decoder:control_main_decoder_inst"
+ 25. Port Connectivity Checks: "control:control_inst"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -54,7 +58,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 06 10:41:20 2024      ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 08 14:02:31 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; non_pipelined_processor_quartus            ;
 ; Top-level Entity Name              ; processor                                  ;
@@ -169,20 +173,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
-; ../source_files/register_file.v  ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v ;         ;
-; ../source_files/processor.v      ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor.v     ;         ;
-; ../source_files/pc.v             ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v            ;         ;
-; ../source_files/imem.sv          ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv         ;         ;
-; ../source_files/extend.v         ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v        ;         ;
-; ../source_files/data_memory.v    ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v   ;         ;
-; ../source_files/alu.v            ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v           ;         ;
-; ../source_files/adder.sv         ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv        ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; ../source_files/control_main_decoder.v ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_main_decoder.v ;         ;
+; ../source_files/control_alu_decoder.v  ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_alu_decoder.v  ;         ;
+; ../source_files/control.v              ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v              ;         ;
+; ../source_files/register_file.v        ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v        ;         ;
+; ../source_files/processor.v            ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor.v            ;         ;
+; ../source_files/pc.v                   ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v                   ;         ;
+; ../source_files/imem.sv                ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv                ;         ;
+; ../source_files/extend.v               ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v               ;         ;
+; ../source_files/data_memory.v          ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v          ;         ;
+; ../source_files/alu.v                  ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v                  ;         ;
+; ../source_files/adder.sv               ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv               ;         ;
++----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -249,6 +256,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: control:control_inst ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; INSTR_WIDTH    ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: pc:pc_inst ;
 +----------------+-------+--------------------------------+
@@ -269,14 +286,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: data_memory:data_memory_inst ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; ADDR_BUS_WIDTH ; 32    ; Signed Integer                                   ;
-; DATA_BUS_WIDTH ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder:adder_inst2 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; BUS_WIDTH      ; 32    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: imem:imem_inst ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; ADDR_BUS_WIDTH ; 16    ; Signed Integer                     ;
+; DATA_BUS_WIDTH ; 32    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -311,55 +338,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: imem:imem_inst ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; ADDR_BUS_WIDTH ; 16    ; Signed Integer                     ;
-; DATA_BUS_WIDTH ; 32    ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: data_memory:data_memory_inst ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; ADDR_BUS_WIDTH ; 32    ; Signed Integer                                   ;
+; DATA_BUS_WIDTH ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "imem:imem_inst"                                                                           ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; rd[14..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rd[6..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_memory:data_memory_inst"                                                            ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; read_data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Port Connectivity Checks: "alu:alu_inst" ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; alu_op ; Input ; Info     ; Stuck at GND ;
-+--------+-------+----------+--------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register_file:register_file_inst"                                                         ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; addr2      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; write_en   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; read_data2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "data_memory:data_memory_inst" ;
-+------------+-------+----------+--------------------------+
-; Port       ; Type  ; Severity ; Details                  ;
-+------------+-------+----------+--------------------------+
-; write_data ; Input ; Info     ; Stuck at GND             ;
-; write_en   ; Input ; Info     ; Stuck at GND             ;
-+------------+-------+----------+--------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:adder_inst2"                                                                                                                                 ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                       ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; a         ; Input  ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "a[31..16]" will be connected to GND. ;
+; y[31..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                           ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------+
@@ -371,6 +377,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; b[1..0]  ; Input ; Info     ; Stuck at GND    ;
 ; b[2]     ; Input ; Info     ; Stuck at VCC    ;
 +----------+-------+----------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pc:pc_inst"                                                                                                                                                                           ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                             ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; pc_next ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "control:control_inst|control_alu_decoder:control_alu_decoder_inst"                                                                              ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                        ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; alu_op ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "alu_op[1..1]" will be connected to GND. ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "control:control_inst|control_main_decoder:control_main_decoder_inst"                                                        ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                   ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; alu_op ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "alu_op[1..1]" have no fanouts ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "control:control_inst" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; zero ; Input ; Info     ; Stuck at GND           ;
++------+-------+----------+------------------------+
 
 
 +-------------------------------+
@@ -388,9 +430,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Oct 06 10:41:18 2024
+    Info: Processing started: Tue Oct 08 14:02:30 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off non_pipelined_processor_quartus -c non_pipelined_processor_quartus
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/control_main_decoder.v
+    Info (12023): Found entity 1: control_main_decoder
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/control_alu_decoder.v
+    Info (12023): Found entity 1: control_alu_decoder
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/control.v
+    Info (12023): Found entity 1: control
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/register_file.v
     Info (12023): Found entity 1: register_file
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/processor_tb.v
@@ -411,17 +459,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file /fpga_p
     Info (12023): Found entity 1: alu
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/adder.sv
     Info (12023): Found entity 1: adder
+Warning (10236): Verilog HDL Implicit Net warning at control.v(29): created implicit net for "alu_op"
 Info (12127): Elaborating entity "processor" for the top level hierarchy
+Info (12128): Elaborating entity "control" for hierarchy "control:control_inst"
+Info (12128): Elaborating entity "control_main_decoder" for hierarchy "control:control_inst|control_main_decoder:control_main_decoder_inst"
+Info (12128): Elaborating entity "control_alu_decoder" for hierarchy "control:control_inst|control_alu_decoder:control_alu_decoder_inst"
 Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_inst"
 Info (12128): Elaborating entity "adder" for hierarchy "adder:adder_inst1"
-Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_inst"
-Warning (10855): Verilog HDL warning at data_memory.v(43): initial value for variable mem should be constant
-Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_inst"
-Info (12128): Elaborating entity "extend" for hierarchy "extend:extend_inst"
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst"
+Info (12128): Elaborating entity "adder" for hierarchy "adder:adder_inst2"
 Info (12128): Elaborating entity "imem" for hierarchy "imem:imem_inst"
 Warning (10855): Verilog HDL warning at imem.sv(21): initial value for variable memory should be constant
 Warning (10030): Net "memory" at imem.sv(16) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_inst"
+Info (12128): Elaborating entity "extend" for hierarchy "extend:extend_inst"
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst"
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_inst"
+Warning (10855): Verilog HDL warning at data_memory.v(43): initial value for variable mem should be constant
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
@@ -429,10 +483,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 4621 megabytes
-    Info: Processing ended: Sun Oct 06 10:41:20 2024
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Oct 08 14:02:31 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

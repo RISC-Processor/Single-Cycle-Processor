@@ -1,6 +1,9 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../../source_files/alu.v" \
+"../../../../../source_files/control.v" \
+"../../../../../source_files/control_alu_decoder.v" \
+"../../../../../source_files/control_main_decoder.v" \
 "../../../../../source_files/data_memory.v" \
 "../../../../../source_files/extend.v" \
 "../../../../../source_files/pc.v" \

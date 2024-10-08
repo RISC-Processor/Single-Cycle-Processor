@@ -2,7 +2,7 @@
 
 module imem
     #(  
-      parameter ADDR_BUS_WIDTH = 5,
+      parameter ADDR_BUS_WIDTH = 16,
       parameter DATA_BUS_WIDTH = 32
     )
     (

@@ -2,7 +2,7 @@
 
 module imem
     #(  
-      parameter ADDR_BUS_WIDTH = 5,
+      parameter ADDR_BUS_WIDTH = 16,
       parameter DATA_BUS_WIDTH = 32
     )
     (
@@ -25,9 +25,19 @@ module imem
 		memory[7] = 8'h03;
 		
 		memory[8] = 8'h00;
-		memory[9] = 8'b00000011;
-		memory[10] = 8'b00000000;
-		memory[11] = 8'h00;	//instr[19:15] = 6
+		memory[9] = 8'h64;
+		memory[10] = 8'hA4;
+		memory[11] = 8'h23;
+
+    memory[12] = 8'h00;
+		memory[13] = 8'h62;
+		memory[14] = 8'hE2;
+		memory[15] = 8'h33;
+
+    memory[16] = 8'hFE;
+		memory[17] = 8'h42;
+		memory[18] = 8'h0A;
+		memory[19] = 8'hE3;
 	end
         
    assign rd = {memory[a], memory[a + 1], memory[a + 2], memory[a + 3]};
