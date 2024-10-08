@@ -16,6 +16,8 @@ module control
     wire [6:0] funct7 = instr[31:25];
     wire [2:0] funct3 = instr[14:12];
 
+    wire [1:0] alu_op;
+
     wire branch;
 
     control_main_decoder control_main_decoder_inst (
@@ -31,7 +33,7 @@ module control
 
     control_alu_decoder control_alu_decoder_inst (
         .opcode(opcode),
-        .funct7(funct7),
+        .funct7_5(funct7[5]),
         .funct3(funct3),
         .alu_op(alu_op),
         .alu_control(alu_control)

@@ -34,6 +34,7 @@ module processor_tb
     wire [BUS_WIDTH - 1:0] pc_target;
     wire [BUS_WIDTH - 1:0] pc_next;
 
+    wire zero;
     wire pc_src;
     wire result_src;
     wire mem_write;
@@ -49,7 +50,7 @@ module processor_tb
 
     // Instantiate control module
     control # (BUS_WIDTH) control_inst (
-        .zero(1'b0),
+        .zero(zero),
         .instr(instr),
         .pc_src(pc_src),
         .result_src(result_src),
@@ -109,16 +110,17 @@ module processor_tb
     // Insntiate alu module
     alu #(BUS_WIDTH) alu_inst (
         .src_a(src_a),
-        .src_b(imm_ext),
+        .src_b(src_b),
         .alu_op(alu_control),
-        .alu_result(alu_result)
+        .alu_result(alu_result),
+        .zero(zero)
     );
 
     // Insntiate data_memory module
     data_memory #(DATA_MEMORY_ADDR_BUS_WIDTH, DATA_MEMORY_DATA_BUS_WIDTH) data_memory_inst (
         .clk(clk),
-        .addr(alu_result - 32'h00002000), // Changed temporarily
-        .write_data(read_data_2),
+        .addr(alu_result - 32'h00002000),
+        .write_data(src_b),
         .write_en(mem_write),
         .read_data(read_data)
     );
