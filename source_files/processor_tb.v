@@ -107,7 +107,7 @@ module processor_tb
         .extended_imm(imm_ext)
     );
 
-    // Instantiate alu module
+    // Insntiate alu module
     alu #(BUS_WIDTH) alu_inst (
         .src_a(src_a),
         .src_b(src_b),

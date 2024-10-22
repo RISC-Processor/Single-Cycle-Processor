@@ -7,16 +7,20 @@ module alu
         input [BUS_WIDTH - 1:0] src_b,
         input [2:0] alu_op,
         output reg [BUS_WIDTH - 1:0] alu_result,
-        output zero
+        output reg zero
     );
-
-    assign zero = 1'b0; // Change this later.
 
     always @(alu_op or src_a or src_b)
     begin
         case(alu_op)
             3'b000: alu_result = src_a + src_b;
-            3'b001: alu_result = src_a - src_b;
+            3'b001: begin
+                alu_result = src_a - src_b;
+                 if (src_a == src_b)
+                     zero = 1'b1;
+                 else
+                     zero = 1'b0;
+            end
             3'b010: alu_result = src_a | src_b;
             3'b011: alu_result = src_a & src_b;
             3'b101: begin
@@ -28,4 +32,9 @@ module alu
             default: alu_result = 0;
         endcase
     end
+
+     initial begin
+         zero = 1'b0;
+     end
+
 endmodule

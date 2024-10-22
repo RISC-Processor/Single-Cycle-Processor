@@ -29,12 +29,12 @@ module imem
 		memory[10] = 8'hA4;
 		memory[11] = 8'h23;
 
-    memory[12] = 8'h00;
+        memory[12] = 8'h00;
 		memory[13] = 8'h62;
 		memory[14] = 8'hE2;
 		memory[15] = 8'h33;
 
-    memory[16] = 8'hFE;
+        memory[16] = 8'hFE;
 		memory[17] = 8'h42;
 		memory[18] = 8'h0A;
 		memory[19] = 8'hE3;

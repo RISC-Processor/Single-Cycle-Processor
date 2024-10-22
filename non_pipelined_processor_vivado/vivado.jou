@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Oct 22 19:32:53 2024
+# Process ID: 10000
+# Current directory: D:/RISC-Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14628 D:\RISC-Processor\Non-Pipelined-Processor\non_pipelined_processor_vivado\non_pipelined_processor.xpr
+# Log file: D:/RISC-Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/vivado.log
+# Journal file: D:/RISC-Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado\vivado.jou
+#-----------------------------------------------------------
+start_guiopen_project D:/RISC-Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.xpr
+update_compile_order -fileset sources_1
+save_project_as non_pipelined_processor_vivado D:/RISC-Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor_vivado -force
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse D:/RISC-Processor/Non-Pipelined-Processor/source_files/alu_zero.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
+reset_run synth_1
+close_sim
+launch_simulation
+source processor_tb.tcl
+close_sim
+launch_simulation
+source processor_tb.tcl
