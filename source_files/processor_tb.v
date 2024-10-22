@@ -88,7 +88,7 @@ module processor_tb
         .rd(instr)
     );
 
-    // Insntiate register_file module
+    // Instantiate register_file module
     register_file #(REG_FILE_ADDR_BUS_WIDTH, REG_FILE_DATA_BUS_WIDTH) register_file_inst (
         .clk(clk),
         .addr1(instr[19:15]),
@@ -100,14 +100,14 @@ module processor_tb
         .read_data2(read_data_2)
     );
 
-    // Insntiate extend module
+    // Instantiate extend module
     extend #(BUS_WIDTH) extend_inst (
         .imm_src(imm_src),
         .instr(instr),
         .extended_imm(imm_ext)
     );
 
-    // Insntiate alu module
+    // Instantiate alu module
     alu #(BUS_WIDTH) alu_inst (
         .src_a(src_a),
         .src_b(src_b),
@@ -116,7 +116,7 @@ module processor_tb
         .zero(zero)
     );
 
-    // Insntiate data_memory module
+    // Instantiate data_memory module
     data_memory #(DATA_MEMORY_ADDR_BUS_WIDTH, DATA_MEMORY_DATA_BUS_WIDTH) data_memory_inst (
         .clk(clk),
         .addr(alu_result - 32'h00002000),

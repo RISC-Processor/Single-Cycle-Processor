@@ -4,7 +4,7 @@ Jun 14 2018
 20:41:02
 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/non_pipelined_processor_vivado/non_pipelined_processor.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv,1728140893,systemVerilog,,D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv,,adder,,,,,,,,
-D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v,1728392821,verilog,,D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v,,alu,,,,,,,,
+D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v,1728402650,verilog,,D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v,,alu,,,,,,,,
 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v,1728387973,verilog,,D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_alu_decoder.v,,control,,,,,,,,
 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_alu_decoder.v,1728387748,verilog,,D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_main_decoder.v,,control_alu_decoder,,,,,,,,
 D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_main_decoder.v,1728389424,verilog,,D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v,,control_main_decoder,,,,,,,,

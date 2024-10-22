@@ -49,6 +49,15 @@ module control_main_decoder
                 reg_write = 1'b0;
                 alu_op = 2'b01;
             end
+            7'd19: begin
+                branch = 1'b0;
+                result_src = 1'b0;
+                mem_write = 1'b0;
+                alu_src = 1'b1;
+                imm_src = 2'b00;
+                reg_write = 1'b1;
+                alu_op = 2'b10;
+            end
             default: begin
                 branch = 1'bx;
                 result_src = 1'bx;
