@@ -33,7 +33,8 @@ module alu
         endcase
     end
 
-     initial begin
+     initial
+     begin
          zero = 1'b0;
      end
 

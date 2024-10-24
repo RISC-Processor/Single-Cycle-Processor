@@ -14,5 +14,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/No
 INFO: [VRFC 10-311] analyzing module pc
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module register_file
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module processor_tb

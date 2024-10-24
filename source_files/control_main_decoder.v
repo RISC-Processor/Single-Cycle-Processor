@@ -16,7 +16,7 @@ module control_main_decoder
         case(opcode)
             7'd3: begin //lw
                 branch = 1'b0;
-                result_src = 2'b10;
+                result_src = 2'b01;
                 mem_write = 1'b0;
                 alu_src = 1'b1;
                 imm_src = 2'b00;
@@ -36,7 +36,7 @@ module control_main_decoder
             end
             7'd51: begin    // R-type
                 branch = 1'b0;
-                result_src = 2'b01;
+                result_src = 2'b00;
                 mem_write = 1'b0;
                 alu_src = 1'b0;
                 imm_src = 2'bxx;
@@ -52,11 +52,11 @@ module control_main_decoder
                 imm_src = 2'b10;
                 reg_write = 1'b0;
                 alu_op = 2'b01;
-                jump = 1'b1;
+                jump = 1'b0;
             end
             7'd19: begin    // addi
                 branch = 1'b0;
-                result_src = 2'b01;
+                result_src = 2'b00;
                 mem_write = 1'b0;
                 alu_src = 1'b1;
                 imm_src = 2'b00;

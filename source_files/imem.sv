@@ -19,16 +19,19 @@ module imem
 //        $readmemh("memfile.dat", memory);
 	initial
 	begin
+		// lw
 		memory[4] = 8'hFF;
 		memory[5] = 8'hC4;
 		memory[6] = 8'hA3;
 		memory[7] = 8'h03;
 		
+		// sw
 		memory[8] = 8'h00;
 		memory[9] = 8'h64;
 		memory[10] = 8'hA4;
 		memory[11] = 8'h23;
 
+		// add
         memory[12] = 8'h00;
 		memory[13] = 8'h62;
 		memory[14] = 8'hE2;

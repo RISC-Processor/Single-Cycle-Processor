@@ -1,5 +1,5 @@
-Analysis & Synthesis report for non_pipelined_processor_quartus
-Tue Oct 08 18:37:26 2024
+Analysis & Elaboration report for non_pipelined_processor_quartus
+Thu Oct 24 12:27:21 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -7,28 +7,23 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |processor
- 10. Parameter Settings for User Entity Instance: control:control_inst
- 11. Parameter Settings for User Entity Instance: pc:pc_inst
- 12. Parameter Settings for User Entity Instance: adder:adder_inst1
- 13. Parameter Settings for User Entity Instance: adder:adder_inst2
- 14. Parameter Settings for User Entity Instance: imem:imem_inst
- 15. Parameter Settings for User Entity Instance: register_file:register_file_inst
- 16. Parameter Settings for User Entity Instance: extend:extend_inst
- 17. Parameter Settings for User Entity Instance: alu:alu_inst
- 18. Parameter Settings for User Entity Instance: data_memory:data_memory_inst
- 19. Port Connectivity Checks: "adder:adder_inst2"
- 20. Port Connectivity Checks: "adder:adder_inst1"
- 21. Port Connectivity Checks: "pc:pc_inst"
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |processor_tb
+  5. Parameter Settings for User Entity Instance: control:control_inst
+  6. Parameter Settings for User Entity Instance: pc:pc_inst
+  7. Parameter Settings for User Entity Instance: adder:adder_inst1
+  8. Parameter Settings for User Entity Instance: adder:adder_inst2
+  9. Parameter Settings for User Entity Instance: imem:imem_inst
+ 10. Parameter Settings for User Entity Instance: register_file:register_file_inst
+ 11. Parameter Settings for User Entity Instance: extend:extend_inst
+ 12. Parameter Settings for User Entity Instance: alu:alu_inst
+ 13. Parameter Settings for User Entity Instance: data_memory:data_memory_inst
+ 14. Analysis & Elaboration Settings
+ 15. Port Connectivity Checks: "adder:adder_inst2"
+ 16. Port Connectivity Checks: "adder:adder_inst1"
+ 17. Port Connectivity Checks: "pc:pc_inst"
+ 18. Analysis & Elaboration Messages
 
 
 
@@ -52,110 +47,23 @@ applicable agreement for further details.
 
 
 +---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
+; Analysis & Elaboration Summary                                                  ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 08 18:37:26 2024      ;
+; Analysis & Elaboration Status      ; Successful - Thu Oct 24 12:27:21 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; non_pipelined_processor_quartus            ;
-; Top-level Entity Name              ; processor                                  ;
+; Top-level Entity Name              ; processor_tb                               ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 0                                          ;
-;     Total combinational functions  ; 0                                          ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 1                                          ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                                     ;
-+----------------------------------------------------------------------------+--------------------+---------------------------------+
-; Option                                                                     ; Setting            ; Default Value                   ;
-+----------------------------------------------------------------------------+--------------------+---------------------------------+
-; Device                                                                     ; EP4CE115F29C7      ;                                 ;
-; Top-level entity name                                                      ; processor          ; non_pipelined_processor_quartus ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX                   ;
-; Use smart compilation                                                      ; Off                ; Off                             ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                              ;
-; Enable compact report table                                                ; Off                ; Off                             ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto                            ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                             ;
-; Preserve fewer node names                                                  ; On                 ; On                              ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                             ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001                    ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993                       ;
-; State Machine Processing                                                   ; Auto               ; Auto                            ;
-; Safe State Machine                                                         ; Off                ; Off                             ;
-; Extract Verilog State Machines                                             ; On                 ; On                              ;
-; Extract VHDL State Machines                                                ; On                 ; On                              ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                             ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                            ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                             ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                              ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                              ;
-; Parallel Synthesis                                                         ; On                 ; On                              ;
-; DSP Block Balancing                                                        ; Auto               ; Auto                            ;
-; NOT Gate Push-Back                                                         ; On                 ; On                              ;
-; Power-Up Don't Care                                                        ; On                 ; On                              ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                             ;
-; Remove Duplicate Registers                                                 ; On                 ; On                              ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                             ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                             ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                             ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                             ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                             ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                              ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                             ;
-; Optimization Technique                                                     ; Balanced           ; Balanced                        ;
-; Carry Chain Length                                                         ; 70                 ; 70                              ;
-; Auto Carry Chains                                                          ; On                 ; On                              ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                              ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                             ;
-; Auto ROM Replacement                                                       ; On                 ; On                              ;
-; Auto RAM Replacement                                                       ; On                 ; On                              ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                              ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto                            ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                            ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                              ;
-; Strict RAM Replacement                                                     ; Off                ; Off                             ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                              ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                             ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                              ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                             ;
-; Auto Resource Sharing                                                      ; Off                ; Off                             ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                             ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                             ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                             ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                              ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                             ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                              ;
-; Report Parameter Settings                                                  ; On                 ; On                              ;
-; Report Source Assignments                                                  ; On                 ; On                              ;
-; Report Connectivity Checks                                                 ; On                 ; On                              ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                             ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                               ;
-; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation              ;
-; HDL message level                                                          ; Level2             ; Level2                          ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                             ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                            ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                            ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                             ;
-; Clock MUX Protection                                                       ; On                 ; On                              ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                             ;
-; Block Design Naming                                                        ; Auto               ; Auto                            ;
-; SDC constraint protection                                                  ; Off                ; Off                             ;
-; Synthesis Effort                                                           ; Auto               ; Auto                            ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                              ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                             ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                          ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                            ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                              ;
-; Synthesis Seed                                                             ; 1                  ; 1                               ;
-+----------------------------------------------------------------------------+--------------------+---------------------------------+
 
 
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
@@ -169,86 +77,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; ../source_files/control_main_decoder.v ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_main_decoder.v ;         ;
-; ../source_files/control_alu_decoder.v  ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_alu_decoder.v  ;         ;
-; ../source_files/control.v              ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v              ;         ;
-; ../source_files/register_file.v        ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v        ;         ;
-; ../source_files/processor.v            ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor.v            ;         ;
-; ../source_files/pc.v                   ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v                   ;         ;
-; ../source_files/imem.sv                ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv                ;         ;
-; ../source_files/extend.v               ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v               ;         ;
-; ../source_files/data_memory.v          ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v          ;         ;
-; ../source_files/alu.v                  ; yes             ; User Verilog HDL File        ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v                  ;         ;
-; ../source_files/adder.sv               ; yes             ; User SystemVerilog HDL File  ; D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv               ;         ;
-+----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 1     ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |processor                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |processor          ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |processor ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; BUS_WIDTH      ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |processor_tb ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; BUS_WIDTH      ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -345,6 +180,93 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                                   ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Option                                                                     ; Setting            ; Default Value                   ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                                 ;
+; Top-level entity name                                                      ; processor_tb       ; non_pipelined_processor_quartus ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX                   ;
+; Use smart compilation                                                      ; Off                ; Off                             ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                              ;
+; Enable compact report table                                                ; Off                ; Off                             ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                            ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                             ;
+; Preserve fewer node names                                                  ; On                 ; On                              ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001                    ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993                       ;
+; State Machine Processing                                                   ; Auto               ; Auto                            ;
+; Safe State Machine                                                         ; Off                ; Off                             ;
+; Extract Verilog State Machines                                             ; On                 ; On                              ;
+; Extract VHDL State Machines                                                ; On                 ; On                              ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                             ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                            ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                             ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                              ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                              ;
+; Parallel Synthesis                                                         ; On                 ; On                              ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                            ;
+; NOT Gate Push-Back                                                         ; On                 ; On                              ;
+; Power-Up Don't Care                                                        ; On                 ; On                              ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                             ;
+; Remove Duplicate Registers                                                 ; On                 ; On                              ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                             ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                             ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                             ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                             ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                             ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                              ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                             ;
+; Optimization Technique                                                     ; Balanced           ; Balanced                        ;
+; Carry Chain Length                                                         ; 70                 ; 70                              ;
+; Auto Carry Chains                                                          ; On                 ; On                              ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                              ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                             ;
+; Auto ROM Replacement                                                       ; On                 ; On                              ;
+; Auto RAM Replacement                                                       ; On                 ; On                              ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                              ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                            ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                            ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                              ;
+; Strict RAM Replacement                                                     ; Off                ; Off                             ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                              ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                             ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                              ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                             ;
+; Auto Resource Sharing                                                      ; Off                ; Off                             ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                             ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                              ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                             ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                              ;
+; Report Parameter Settings                                                  ; On                 ; On                              ;
+; Report Source Assignments                                                  ; On                 ; On                              ;
+; Report Connectivity Checks                                                 ; On                 ; On                              ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                             ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                               ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation              ;
+; HDL message level                                                          ; Level2             ; Level2                          ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                             ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                            ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                            ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                             ;
+; Clock MUX Protection                                                       ; On                 ; On                              ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                             ;
+; Block Design Naming                                                        ; Auto               ; Auto                            ;
+; SDC constraint protection                                                  ; Off                ; Off                             ;
+; Synthesis Effort                                                           ; Auto               ; Auto                            ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                              ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                             ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                          ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                            ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                              ;
+; Synthesis Seed                                                             ; 1                  ; 1                               ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "adder:adder_inst2"                                                                       ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -375,23 +297,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Oct 08 18:37:20 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off non_pipelined_processor_quartus -c non_pipelined_processor_quartus
+    Info: Processing started: Thu Oct 24 12:27:20 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off non_pipelined_processor_quartus -c non_pipelined_processor_quartus --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/control_main_decoder.v
     Info (12023): Found entity 1: control_main_decoder
@@ -419,7 +332,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file /fpga_p
     Info (12023): Found entity 1: alu
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga_projects/rv32i_processor/non-pipelined-processor/source_files/adder.sv
     Info (12023): Found entity 1: adder
-Info (12127): Elaborating entity "processor" for the top level hierarchy
+Info (12127): Elaborating entity "processor_tb" for the top level hierarchy
+Warning (10755): Verilog HDL warning at processor_tb.v(12): assignments to clk create a combinational loop
 Info (12128): Elaborating entity "control" for hierarchy "control:control_inst"
 Info (12128): Elaborating entity "control_main_decoder" for hierarchy "control:control_inst|control_main_decoder:control_main_decoder_inst"
 Info (12128): Elaborating entity "control_alu_decoder" for hierarchy "control:control_inst|control_alu_decoder:control_alu_decoder_inst"
@@ -432,20 +346,19 @@ Warning (10030): Net "memory" at imem.sv(16) has no driver or initial value, usi
 Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_inst"
 Info (12128): Elaborating entity "extend" for hierarchy "extend:extend_inst"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst"
+Warning (10240): Verilog HDL Always Construct warning at alu.v(13): inferring latch(es) for variable "zero", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "zero" at alu.v(13)
 Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_inst"
 Warning (10855): Verilog HDL warning at data_memory.v(43): initial value for variable mem should be constant
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Tue Oct 08 18:37:26 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4604 megabytes
+    Info: Processing ended: Thu Oct 24 12:27:21 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

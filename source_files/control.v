@@ -41,6 +41,6 @@ module control
         .alu_control(alu_control)
     );
 
-    assign pc_src = (zero & branch) | jump;
-
+    // assign pc_src = (zero & branch) | jump;  // This represents the correct logic
+    assign pc_src = zero & branch;
 endmodule
