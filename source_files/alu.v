@@ -29,6 +29,7 @@ module alu
                 else
                     alu_result = {BUS_WIDTH{1'b0}};
             end
+            3'b110: alu_result = src_b;
             default: alu_result = 0;
         endcase
     end

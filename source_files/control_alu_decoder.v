@@ -12,9 +12,11 @@ module control_alu_decoder
         case(alu_op)
             2'b00: alu_control = 3'b000;    // add
             2'b01: alu_control = 3'b001;    // sub
-            2'b10: begin
+            2'b10: 
+            begin
                 case(funct3)
-                    3'b000: begin
+                    3'b000: 
+                    begin
                         if({opcode[5], funct7_5} == 2'b11)
                         begin
                             alu_control = 3'b001;   // sub
@@ -30,6 +32,7 @@ module control_alu_decoder
                     default: alu_control = 3'bxxx;
                 endcase
             end
+            2'b11: alu_control = 3'b110;    // just pass
             default: alu_control = 3'bxxx;
         endcase
     end

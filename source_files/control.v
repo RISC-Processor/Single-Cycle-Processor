@@ -8,7 +8,7 @@ module control
         output mem_write,
         output [2:0] alu_control,
         output alu_src,
-        output [1:0] imm_src,
+        output [2:0] imm_src,
         output reg_write
     );
 
@@ -41,6 +41,15 @@ module control
         .alu_control(alu_control)
     );
 
-    // assign pc_src = (zero & branch) | jump;  // This represents the correct logic
-    assign pc_src = zero & branch;
+    reg pc_src_reg;
+
+    always @(*) begin
+        if (jump)
+            pc_src_reg = 1'b1;
+        else
+            pc_src_reg = zero & branch;
+    end
+    
+    assign pc_src = pc_src_reg;
+
 endmodule

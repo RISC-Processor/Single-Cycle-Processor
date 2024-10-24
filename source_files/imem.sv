@@ -19,35 +19,53 @@ module imem
 //        $readmemh("memfile.dat", memory);
 	initial
 	begin
-		// lw
+		// lw x6 -4(x9)
 		memory[4] = 8'hFF;
 		memory[5] = 8'hC4;
 		memory[6] = 8'hA3;
 		memory[7] = 8'h03;
 		
-		// sw
+		// sw x6, 8(x9)
 		memory[8] = 8'h00;
 		memory[9] = 8'h64;
 		memory[10] = 8'hA4;
 		memory[11] = 8'h23;
 
-		// add
+		// or x4, x5, x6
         memory[12] = 8'h00;
 		memory[13] = 8'h62;
 		memory[14] = 8'hE2;
 		memory[15] = 8'h33;
 
-		// beq
+		// beq x4, x4, 24
         memory[16] = 8'h00;  // 8'hFE;
 		memory[17] = 8'h42;
 		memory[18] = 8'h0C;  // 8'h0A;
 		memory[19] = 8'h63;  // 8'hE3;
 
-		// Branch to this address.
+		// or x4, x5, x6
 		memory[40] = 8'h00;
 		memory[41] = 8'h62;
 		memory[42] = 8'hE2;
 		memory[43] = 8'h33;
+
+		// Addi x12, x5(17)
+		memory[44] = 8'h01;
+		memory[45] = 8'h12;
+		memory[46] = 8'h86;
+		memory[47] = 8'h13;
+
+		// lui x7, 4560
+		memory[48] = 8'h01;
+		memory[49] = 8'h1d;
+		memory[50] = 8'h03;
+		memory[51] = 8'hb7;
+
+		// jal x2, -40
+		memory[52] = 8'hfd;
+		memory[53] = 8'h9f;
+		memory[54] = 8'hf1;
+		memory[55] = 8'h6f;
 	end
         
    assign rd = {memory[a], memory[a + 1], memory[a + 2], memory[a + 3]};

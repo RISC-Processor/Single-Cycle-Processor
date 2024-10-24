@@ -32,7 +32,7 @@ module processor
     wire mem_write;
     wire [2:0] alu_control;
     wire alu_src;
-    wire [1:0] imm_src;
+    wire [2:0] imm_src;
     wire reg_write;
 
     assign src_a = read_data_1;
