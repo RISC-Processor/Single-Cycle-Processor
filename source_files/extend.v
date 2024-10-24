@@ -15,9 +15,10 @@ module extend
     always @(imm_src, instr)
     begin
         case (imm_src)
-            2'b00 : extended_imm = {{20{instr[31]}}, instr[31:20]};
-            2'b01 : extended_imm = {{20{instr[31]}}, instr[31:25], instr[11:7]};
-            2'b10 : extended_imm = {{19{instr[31]}}, instr[31], instr[7], instr[30:25], instr[11:8], 1'b0};
+            2'b00 : extended_imm = {{20{instr[31]}}, instr[31:20]}; // I-type
+            2'b01 : extended_imm = {{20{instr[31]}}, instr[31:25], instr[11:7]};  // S-type
+            2'b10 : extended_imm = {{19{instr[31]}}, instr[31], instr[7], instr[30:25], instr[11:8], 1'b0}; // B-type
+            2'b11 : extended_imm = {{12{instr[31]}}, instr[19:12], instr[20], instr[30:21], 1'b0};    // J-type
             default : extended_imm = 32'b0;
         endcase
     end

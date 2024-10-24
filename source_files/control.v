@@ -4,7 +4,7 @@ module control
         input zero,
         input [INSTR_WIDTH - 1: 0] instr,
         output pc_src,
-        output result_src,
+        output [1:0] result_src,
         output mem_write,
         output [2:0] alu_control,
         output alu_src,
@@ -19,6 +19,7 @@ module control
     wire [1:0] alu_op;
 
     wire branch;
+    wire jump;
 
     control_main_decoder control_main_decoder_inst (
         .opcode(opcode),
@@ -28,7 +29,8 @@ module control
         .alu_src(alu_src),
         .imm_src(imm_src),
         .reg_write(reg_write),
-        .alu_op(alu_op)
+        .alu_op(alu_op),
+        .jump(jump)
     );
 
     control_alu_decoder control_alu_decoder_inst (
@@ -39,6 +41,6 @@ module control
         .alu_control(alu_control)
     );
 
-    assign pc_src = zero & branch;
+    assign pc_src = (zero & branch) | jump;
 
 endmodule

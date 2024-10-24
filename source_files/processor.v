@@ -28,7 +28,7 @@ module processor
 
     wire zero;
     wire pc_src;
-    wire result_src;
+    wire [1:0] result_src;
     wire mem_write;
     wire [2:0] alu_control;
     wire alu_src;
@@ -37,7 +37,7 @@ module processor
 
     assign src_a = read_data_1;
     assign src_b = alu_src ? imm_ext : read_data_2;
-    assign write_data = result_src ? read_data : alu_result;
+    assign write_data = result_src == 2'b00 ? alu_result : (result_src == 2'b01 ? read_data : {{BUS_WIDTH - INST_MEMORY_ADDR_BUS_WIDTH{1'b0}}, pc_4});
     assign pc_next = pc_src ? pc_target[INST_MEMORY_ADDR_BUS_WIDTH - 1:0] : pc_4;
 
     // Instantiate control module

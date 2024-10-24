@@ -1,4 +1,18 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/adder.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/imem.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module imem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_alu_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_alu_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/control_main_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_main_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Projects/RV32I_Processor/Non-Pipelined-Processor/source_files/processor_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processor_tb
