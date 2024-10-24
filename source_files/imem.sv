@@ -34,10 +34,17 @@ module imem
 		memory[14] = 8'hE2;
 		memory[15] = 8'h33;
 
-        memory[16] = 8'hFE;
+		// beq
+        memory[16] = 8'h00;  // 8'hFE;
 		memory[17] = 8'h42;
-		memory[18] = 8'h0A;
-		memory[19] = 8'hE3;
+		memory[18] = 8'h0C;  // 8'h0A;
+		memory[19] = 8'h63;  // 8'hE3;
+
+		// Branch to this address.
+		memory[40] = 8'h00;
+		memory[41] = 8'h62;
+		memory[42] = 8'hE2;
+		memory[43] = 8'h33;
 	end
         
    assign rd = {memory[a], memory[a + 1], memory[a + 2], memory[a + 3]};

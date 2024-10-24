@@ -5,10 +5,10 @@
   <File Type="REPORTS-TCL" Name="processor_reports.tcl"/>
   <File Type="OPT-DCP" Name="processor_opt.dcp"/>
   <File Type="OPT-DRC" Name="processor_drc_opted.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="processor_incremental_reuse_pre_placed.rpt"/>
   <File Type="OPT-HWDEF" Name="processor.hwdef"/>
   <File Type="PWROPT-DCP" Name="processor_pwropt.dcp"/>
   <File Type="PLACE-DCP" Name="processor_placed.dcp"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="processor_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="processor.bgn"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="processor_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="processor.bin"/>
