@@ -16,7 +16,7 @@ module processor_tb
     localparam DATA_MEMORY_DATA_BUS_WIDTH = 32;
     localparam REG_FILE_ADDR_BUS_WIDTH = 5;
     localparam REG_FILE_DATA_BUS_WIDTH = 32;
-    localparam INST_MEMORY_ADDR_BUS_WIDTH = 16;
+    localparam INST_MEMORY_ADDR_BUS_WIDTH = 32;
     localparam INST_MEMORY_DATA_BUS_WIDTH = 32;
      
     // Wires for module instantiation, and connections
@@ -72,7 +72,7 @@ module processor_tb
     // Instantiate adder for adding 4 to pc
     adder # (INST_MEMORY_ADDR_BUS_WIDTH) adder_inst1 (
         .a(pc_out),
-        .b({{12{1'b0}}, 4'b0100}),
+        .b({{28{1'b0}}, 4'b0100}),
         .y(pc_4)
     );
 

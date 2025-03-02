@@ -12,6 +12,23 @@ The source code is found in the `src` folder.
 
 3. `src/top_non_pipelined_processor_quartus.v` - Top level entity for the Quartus project
 
+## Simulation
+
+To use Icarus Verilog (`iverilog`) for simulation, use need `iverilog` and `gtkwave` installed in your system.
+
+Then follow following steps to run simulation.
+
+> Note that you should start executing commands from the repository root.
+
+1. `cd src/non_pipelined_processor/src`
+
+2. `iverilog -g2012 -o ../sim/processor_tb  ../sim/processor_tb.sv control.v control_main_decoder.v control_alu_decoder.v pc.v adder.sv imem.v register_file.v extend.v alu.v data_memory.v`
+
+3. `cd ../sim`
+
+4. `vvp processor_tb`
+
+5. `gtkwave processor_tb.vcd`
 
 ## Build Project
 
