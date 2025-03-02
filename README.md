@@ -30,6 +30,10 @@ Then follow following steps to run simulation.
 
 5. `gtkwave processor_tb.vcd`
 
+![Waveform zoomed out](/src/non_pipelined_processor/sim/non_pipelined_processor_1.png)
+
+![Waveform](/src/non_pipelined_processor/sim/non_pipelined_processor_2.png)
+
 ## Build Project
 
 1. Clone the repository with `--recursive` flag, so that all submodules are also cloned.
