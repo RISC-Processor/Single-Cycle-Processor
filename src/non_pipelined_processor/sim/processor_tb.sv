@@ -126,4 +126,10 @@ module processor_tb
         .read_data(read_data)
     );
 
+    initial begin
+        $dumpfile("processor_tb.vcd");
+        $dumpvars(0, processor_tb);
+        #1000 $finish;
+    end
+
 endmodule
