@@ -1,0 +1,2 @@
+src/non_pipelined_processor/sim/pc_tb.v
+src/non_pipelined_processor/sim/processor_tb.v
