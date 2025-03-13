@@ -14,9 +14,9 @@ The source code is found in the `src` folder.
 
 ## Simulation
 
-To use Icarus Verilog (`iverilog`) for simulation, use need `iverilog` and `gtkwave` installed in your system.
+> To do simulation as described below, [Icarus Verilog](https://bleyer.org/icarus/) and [GTKWave](https://gtkwave.sourceforge.net/) are required.
 
-Then follow following steps to run simulation.
+Once installed, follow these steps to run simulation. Otherwise, you are free to use any simulation tool you prefer.
 
 > Note that you should start executing commands from the repository root.
 
@@ -37,37 +37,25 @@ Then follow following steps to run simulation.
 ## Build Project
 
 1. Clone the repository with `--recursive` flag, so that all submodules are also cloned.
-<!--TODO: Change the link to point to RISC-Processor-->
 ```bash
-git clone --recursive https://github.com/linukaratnayake/DSD-Non-Pipelined-Processor.git
+git clone --recursive https://github.com/RISC-Processor/Non-Pipelined-Processor.git
 ```
 
-<!--This step should be removed once merged to the main branch.-->
-2. Checkout to branch `using-hog`.
-```bash
-git checkout using-hog
-```
-
-<!--This step should be removed once merged to the main branch.-->
-3. Run
-```bash
-git submodule update
-``` 
-
-4. Add `bin` folder of your Quartus installation to the `PATH` (System Variables).
+2. Add `bin` folder of your Quartus installation to the `PATH` (System Variables).
+For example:
 ```bash
 set PATH=C:\intelFPGA\<VERSION>\quartus\bin;%PATH%
 ```
-> Use `Git Bash`, since Windows Command Prompt/ PowerShell does not support the above command. Or do it manually.
+> In Windows, use `Git Bash`, since Command Prompt/ PowerShell does not support the above command. Or do it manually.
 
 <!--TODO: Find why and resolve the issue on how to run it in CMD.-->
 
-5. In repo root, execute the following line to build the Quartus project.
+3. In repo root, execute the following line to build the Quartus project.
 ```bash
 ./Hog/Do CREATE non_pipelined_processor_quartus
 ```
-> Use `Git Bash`, since Windows Command Prompt/ PowerShell does not support the above command.
+> In Windows, use `Git Bash`, since Command Prompt/ PowerShell does not support the above command.
 
 <!--TODO: Find why and resolve the issue on how to run it in CMD.-->
 
-6. Navigate to `Projects/non_pipelined_processor_quartus` folder and open `non_pipelined_processor_quartus.qpf`.
+4. Navigate to `Projects/non_pipelined_processor_quartus` folder and open `non_pipelined_processor_quartus.qpf`.
