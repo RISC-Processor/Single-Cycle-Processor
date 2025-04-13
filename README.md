@@ -13,7 +13,7 @@ The source code is found in the `src` folder.
 3. `src/top_single_cycle_processor_quartus.v` - Top level entity for the Quartus project
 
 ## Top Level Block Design
-![Top Level Block Design](/src/block_design.jpeg)
+<img src="/src/block_design.jpeg" alt="Top Level Block Design" width="50%">
 
 
 ## Simulation
