@@ -1,0 +1,2 @@
+src/single_cycle_processor/sim/pc_tb.v
+src/single_cycle_processor/sim/processor_tb.v
