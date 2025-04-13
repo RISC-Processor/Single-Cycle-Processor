@@ -13,7 +13,7 @@ The source code is found in the `src` folder.
 3. `src/top_single_cycle_processor_quartus.v` - Top level entity for the Quartus project
 
 ## Top Level Block Design
-<img src="/src/block_design.jpeg" alt="Top Level Block Design" width="50%">
+<img src="/res/block_design.jpeg" alt="Top Level Block Design" width="50%">
 
 
 ## Simulation
@@ -34,9 +34,9 @@ Once installed, follow these steps to run simulation. Otherwise, you are free to
 
 5. `gtkwave processor_tb.vcd`
 
-![Waveform zoomed out](/src/single_cycle_processor/sim/single_cycle_processor_1.png)
+![Waveform zoomed out](/res/single_cycle_processor_1.png)
 
-![Waveform](/src/single_cycle_processor/sim/single_cycle_processor_2.png)
+![Waveform](/res/single_cycle_processor_2.png)
 
 ## Build Project
 
