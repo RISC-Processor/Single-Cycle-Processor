@@ -4,26 +4,26 @@ module register_file
         parameter DATA_BUS_WIDTH = 32
     )
     (
-		  // From datapath
-        input clk,// done by hand
-		  input rst,
-        input [ADDR_BUS_WIDTH - 1:0] addr1,
-        input [ADDR_BUS_WIDTH - 1:0] addr2,
-        input [ADDR_BUS_WIDTH - 1:0] addr3,
-        input [DATA_BUS_WIDTH - 1:0] write_data,
-        input write_en,
-        output [DATA_BUS_WIDTH - 1:0] read_data1,
-        output [DATA_BUS_WIDTH - 1:0] read_data2,
-		  output [7: 0] LEDG,
+		// From datapath
+        input                           clk,// done by hand with a push button for demo
+		input                           rst,
+        input [ADDR_BUS_WIDTH - 1:0]    addr1,
+        input [ADDR_BUS_WIDTH - 1:0]    addr2,
+        input [ADDR_BUS_WIDTH - 1:0]    addr3,
+        input [DATA_BUS_WIDTH - 1:0]    write_data,
+        input                           write_en,
+        output [DATA_BUS_WIDTH - 1:0]   read_data1,
+        output [DATA_BUS_WIDTH - 1:0]   read_data2,
+		output [7: 0]                   LEDG,
 //		  output [7: 0] LEDR1,
 //		  output [7: 0] LEDR2,
 		  
-		  // From UART
-		  input clk_50M,
-		  input en,
-		  input Tx_busy,
-		  output reg [7:0] dout,// Output is now 8 bits
-		  output reg Ready_Byte// Ready signal for 8-bit data
+		// From UART
+		input                           clk_50M,
+		input en,
+		input Tx_busy,
+		output reg [7:0] dout,// Output is now 8 bits
+		output reg Ready_Byte// Ready signal for 8-bit data
     );
 	 
 	//  always @(posedge clk) begin
@@ -43,7 +43,8 @@ module register_file
 	 begin
         registerFile[5]  = 32'b00000000000000000000000000000110; // 6
         registerFile[9]  = 32'b00000000000000000000000000000100; // 4
-		  registerFile[0]  = 32'b00000000000000000000000000000000; // Register 0
+
+		registerFile[0]  = 32'b00000000000000000000000000000000; // Register 0
         registerFile[1]  = 32'b00000000000000000000000000000001; // Register 1
         registerFile[2]  = 32'b00000000000000000000000000000011; // Register 2
         registerFile[3]  = 32'b00000000000000000000000000000111; // Register 3
@@ -106,9 +107,9 @@ module register_file
                REG_SENT    = 3'b101;
 
     // Internal signals
-    reg [4:0] incrementer;           // Register index
-    reg [1:0] byte_counter;          // Byte counter for 32-bit data
-    reg [31:0] current_reg_value;    // Current 32-bit register value
+    reg [4:0]  incrementer;           // Register index
+    reg [1:0]  byte_counter;          // Byte counter for 32-bit data
+    reg [31:0] current_reg_value;     // Current 32-bit register value
 
     // State transition logic
     always @(posedge clk_50M or posedge en) begin

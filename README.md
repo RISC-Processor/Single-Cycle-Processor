@@ -1,6 +1,6 @@
 # Single Cycle Processor for RV32I
 
-The repository contains the source code for a single cycle non-pipelined processor designed to run the RISC-V 32-bit base intruction set (RV32I).
+The repository contains the source code for a single cycle processor designed to run the RISC-V 32-bit base intruction set (RV32I).
 
 The processor is interfaced with UART to communicate with a computer so that the content of the registers, data memory or instruction memory can be observed, and modified.
 
@@ -11,6 +11,10 @@ The source code is found in the `src` folder.
 2. `src/uart` - Verilog files for UART communication
 
 3. `src/top_single_cycle_processor_quartus.v` - Top level entity for the Quartus project
+
+## Top Level Block Design
+![Top Level Block Design](/src/block_design.jpeg)
+
 
 ## Simulation
 

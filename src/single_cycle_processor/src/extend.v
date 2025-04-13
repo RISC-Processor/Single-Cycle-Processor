@@ -1,5 +1,5 @@
 module extend
-    //Currently for load word (lw) instruction, this only takes 12 bits,
+    // Currently for load word (lw) instruction, this only takes 12 bits,
     // and sign extend it to 32 bits.
 
     // Later, we have to consider about the different locations where,

@@ -1,3 +1,4 @@
+// Dummy RegFile
 module RegFileWrapper (
     input  logic          clk,        
     input  logic          rst,
@@ -5,7 +6,7 @@ module RegFileWrapper (
     input  logic          Tx_busy,
     output logic  [7:0]   dout,        // Output is now 8 bits
     output logic          Ready_Byte,   // Ready signal for 8-bit data
-	 output logic  [7: 0]  LED
+	output logic  [7: 0]  LED
 );
     
 //  assign LED = {3'b0, incrementer};
@@ -16,15 +17,15 @@ module RegFileWrapper (
         IDLE,
         OUTPUT_REG,
         OUTPUT_BYTE,
-		  SEND_BYTE,
-		  BYTE_SENT,
-		  REG_SENT
+		SEND_BYTE,
+		BYTE_SENT,
+		REG_SENT
     } state_t;
     
     state_t current_state = IDLE, next_state;
     
-    logic [4:0] incrementer;         // Register index
-    logic [1:0] byte_counter;        // To keep track of which byte is being sent
+    logic [4:0]  incrementer;         // Register index
+    logic [1:0]  byte_counter;        // To keep track of which byte is being sent
     logic [31:0] registerFile [31:0]; // Register file with 32 registers, 32-bit each
     logic [31:0] current_reg_value;   // Holds the current 32-bit register value
     

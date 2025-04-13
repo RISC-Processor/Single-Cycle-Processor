@@ -6,29 +6,28 @@ module imem
       parameter DATA_BUS_WIDTH = 32
     )
     (
-        input [ADDR_BUS_WIDTH - 1:0] a,
-        output  [DATA_BUS_WIDTH - 1:0] rd,
+      input     [ADDR_BUS_WIDTH - 1:0]  a,
+      output    [DATA_BUS_WIDTH - 1:0]  rd,
 //		  output [7: 0] LEDR,
-		  input enable, 
-		  input [7: 0] instIn
-		  
+	  input                             enable, 
+	  input     [7: 0]                  instIn
     );
 
     localparam MEM_DEPTH = 2 ** (ADDR_BUS_WIDTH-10);
     localparam MEM_WIDTH = 8;
       
-    reg [MEM_WIDTH - 1:0] memory[MEM_DEPTH - 1:0];
+    reg [MEM_WIDTH - 1:0] memory [MEM_DEPTH - 1:0];
     
 
-	 integer i; // Loop variable
+	integer i; // Loop variable
 
     initial begin
         // Initialize all memory locations to 0
         for (i = 0; i < 62; i = i + 4) begin
             memory[i] = 8'h00;
-				memory[i+1] = 8'h00;
-				memory[i+2] = 8'h00;
-				memory[i+3] = 8'h13;
+			memory[i+1] = 8'h00;
+			memory[i+2] = 8'h00;
+			memory[i+3] = 8'h13;
         end
 
         // Assign the specific memory values
@@ -84,12 +83,12 @@ module imem
 //  assign LEDG = memory[5];
     assign rd = {memory[a], memory[a + 1], memory[a + 2], memory[a + 3]};
 
-	 reg [6: 0] j = 0;
+	reg [6: 0] j = 0;
 	 
-	 always @(posedge enable) begin
-			memory[j] <= instIn;
-			j <= j + 1;
-	 end
+	always @(posedge enable) begin
+		memory[j] <= instIn;
+		j <= j + 1;
+	end
 	 
 //	 assign LEDR = memory[0];
 	 

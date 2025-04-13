@@ -71,8 +71,8 @@ processor processor_u(
 
 
 transmitter uart_Tx(
-				   .data_in(RegFiletToTx),
-					.wr_en(Ready_Byte),
+					.data_in(RegFiletToTx),
+				    .wr_en(Ready_Byte),
 					.clk_50m(CLOCK_50),
 					.clken(Txclk_en), 
 					.Tx(EX_IO[0]),
@@ -81,15 +81,15 @@ transmitter uart_Tx(
 					
 										
 baudrate uart_baud(	
-				   .clk_50m(CLOCK_50),
+				    .clk_50m(CLOCK_50),
 					.Rxclk_en(Rxclk_en),
 					.Txclk_en(Txclk_en)
 					);
 					
 
 receiver uart_Rx(  
-				   .Rx(EX_IO[1]),
-			      .ready(ready),
+					.Rx(EX_IO[1]),
+			        .ready(ready),
 					.clk_50m(CLOCK_50),
 					.clken(Rxclk_en), 
 					.data_out(RxToIMem)
